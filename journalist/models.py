@@ -1,3 +1,4 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
@@ -14,9 +15,10 @@ class Journalist(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255, blank=True)
-    author = models.ForeignKey(Journalist, on_delete=models.CASCADE)
-    thumbnail = models.ImageField(upload_to="", null=True)
-    content = RichTextField(blank=True, null=True)
+    author = models.ForeignKey(Journalist, related_name='post_author', on_delete=models.CASCADE)
+    editor = models.ForeignKey(Journalist, related_name='post_editor', on_delete=models.CASCADE, null=True)
+    thumbnail = models.ImageField(upload_to='images/', null=True)
+    content = RichTextUploadingField(blank=True, null=True)
     post_date = models.DateField(auto_now_add=True)
     category = models.CharField(max_length=20, null=True, blank=True)
     

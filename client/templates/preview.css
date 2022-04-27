@@ -1,0 +1,223 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse; /*테두리마감 겹침*/
+    margin:0px;
+    padding:0px;
+    color:black;
+}
+
+
+.wrap{
+    width: 100%;
+    height: auto;
+    background-color: rgb(246, 246, 242);
+}
+
+/* 제목 + 네비게이터 */
+.header{
+    height: 200px;
+    background-color: rgb(129, 148, 183);
+}
+
+.header_title{
+    width: auto;
+    white-space: nowrap;
+    text-overflow: hidden;
+    height: 130px;
+    border-bottom: 2px solid rgba(69, 79, 100);
+    text-align: left;
+    line-height: 160px;
+    font-size: 90px;
+}
+
+.header_title> a{
+    margin-left: 300px;
+}
+
+@media (max-width: 1200px) {
+    .title {
+      font-size: 40px;
+    }
+  }
+
+.header_nav_ul{
+    display: flex;
+    width: 900px;
+    line-height: 70px;
+    font-size: 30px;
+    margin-left: 260px;
+}
+
+.header_nav_ul> li{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin: auto;
+}  
+
+.header_nav_ul> li> a{
+    color: #272A32;
+}
+
+/* 양 옆 마진 잡아주는 컨텐트 */
+.content{
+    height: auto;
+    width: 100%;
+}
+
+.articles_preview{
+    padding: 100px 0;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.articles_preview>ol{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    /* 이거 가운데에 맞추느라 6의 배수로 기사 띄우기 */
+}
+
+/* 각각 아티클 하나!!! */
+.article_preview{
+    position: relative;
+    border: 2px solid #959697;
+    height: 1000px;
+    width: 700px;
+    margin-bottom: 80px; 
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.arti_pre_header_img{
+    height: auto;
+    width: auto;
+}
+.arti_pre_header_img> .header_img{
+    width: 700px;
+}
+
+.arti_pre_header_title{
+    height: auto;
+    width: auto;
+}
+
+.arti_pre_header_title>h1{
+    font-size: 50px;
+    margin: 20px 30px 0;
+}
+
+.arti_pre_teaser{
+    height: auto;
+    font-size: 40px;
+    color: #7d7d7d;
+    text-align: left;
+    margin: 10px 30px 0;
+    position: relative;
+}
+
+.article_preview_footer{
+    position:absolute;
+    width: 100%;
+    /* background-color: pink; */
+    font-size: 30px;
+    bottom: 10px;
+}
+
+.article_preview_publication{
+    padding-left: 30px;
+    padding-top: 15px;
+    display: flex;
+}
+
+.arti_pre_pub_img{
+    height: 64px;
+    width: 64px;
+    border-radius: 50px;
+}
+
+.article_preview_info{
+    padding-left: 30px;
+    /* background-color: aqua; */
+}
+.arti_pre_info_author{
+    display: block;
+    /* background-color: #af1d1d; */
+}
+
+.arti_pre_pub_nav{
+    position: absolute;
+    padding-right: 30px;
+    top: 50px;
+    right: 13px;
+    color: #af1d1d;
+}
+
+
+
+/* 모든 아티클에 이거 추가 해야 함.
+.arti1{
+    width: 700px;
+    height: 1000px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: #fff;
+} */
+
+/* 말하자면 이런 식으로 바뀐다는 뜻 수정 왕창 들어가야 함. 예과 애들이랑 이야기 해보기 */
+
+
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: #272A32;
+    bottom: 0;
+}
+
+.footer_content{
+    padding-top: 90px;
+    text-align: center;
+    font-size: 20px;
+} 
+
+.developmentteam>p, .footer_schoolinfo>p{
+    color:beige;
+}
+
+
+
+
+
+
+
+
+
+
+/* 여기부터 article 1 css 지우지 말 것*/
+
+
+.article{
+    padding: 110px 250px 150px 300px;
+}
+
+.arti_nav{
+    font-size: 30px;
+}
+
+.arti_date{
+    font-size: 25px;
+}
+
+.arti_title{
+    font-size: 60px;
+}
+
+.arti_picture>img{
+    width: 100%;
+}
+
+.main_text{
+    font-size: 50px;
+    margin-top: 50px;
+}

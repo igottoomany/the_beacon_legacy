@@ -46,22 +46,16 @@
                 </div>
                 <div class="writer_info">
                     <div class="writer_email">
-                        <img src="img/thebeacon.png">
                     </div>
-                    <p>wirter: 최예은 yaeon choi</p> 
-                    <p>editor: 김우림 ulim kim</p>
+                    <p>writer: {{ post.author.dream_name }} {{ post.author.user.first_name }} {{ post.author.user.last_name }}</p>
+                    <p>editor: {{ post.editor.dream_name }} {{ post.editor.user.first_name }} {{ post.editor.user.last_name }}</p>
                     <br><br>
                 </div>
                 <div class="arti_picture">
-                    <img src="/img/image1.jpg">
+                    <img src="{{ post.thumbnail.url }}">
                 </div>
                 <div class="main_text">
-                    Without access to his university campus, Wang and his team can’t analyse animal samples collected previously. Wang says the impact is manageable for him, but he worries about his students, whose dissertations rely on the data from such analyses.
-    
-                    “Over the past two years, our students have been under tremendous pressure and faced great uncertainty about their future. As a teacher, I worry such uncertainty will make my students prioritize stability over what they actually want to pursue when choosing a career,” he says.
-    
-                    With Shanghai at a standstill, Wang also found himself overwhelmed by fresh responsibilities. Besides conducting research and mentoring his students, he needs to take care of his young child, who is also cooped up at home, and help with cooking. He must also look for ways to get groceries, which are difficult to find because residents are barred from leaving their homes, so the city’s entire population is relying on a limited number of delivery workers to bring necessities to their doors. “I feel really tired and stretched thin,” he says.
-    
+                    {{ post.content | safe}}
                 </div>
             </div>
         </article>
