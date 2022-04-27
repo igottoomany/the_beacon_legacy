@@ -13,15 +13,24 @@ class Journalist(models.Model):
         return self.dream_name
 
 
+class Category(models.Model):
+    name = models.fields.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     title = models.CharField(max_length=255, blank=True)
+    snippet = models.CharField(max_length=100, null=True, blank=True)
     author = models.ForeignKey(Journalist, related_name='post_author', on_delete=models.CASCADE)
     editor = models.ForeignKey(Journalist, related_name='post_editor', on_delete=models.CASCADE, null=True)
     thumbnail = models.ImageField(upload_to='images/', null=True)
     content = RichTextUploadingField(blank=True, null=True)
     post_date = models.DateField(auto_now_add=True)
-    category = models.CharField(max_length=20, null=True, blank=True)
-    
+    category = models.ForeignKey(Category, null=True, related_name='category', on_delete=models.SET_NULL)
+
+
     def __str__(self):
         return str(self.title) + ' | ' + str(self.author)
 
