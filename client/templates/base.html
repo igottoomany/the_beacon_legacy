@@ -9,6 +9,7 @@
     <meta name="viewport"
     content="width=device-width, initial-scale=1"
     user-scaleable="yes">
+    <link rel = "icon" href = "{% static 'image/icon.ico' %}" type = "image/icon">
     <!-- 반응형 웹 사이트 -->
 
     <title>The beacon</title>
@@ -20,7 +21,7 @@
 <body class="wrap">
     <header class="header">
         <div class="header_title">
-            <a href="index.html">THE BEACON</a>
+            <a href="{% url 'index' %}">THE BEACON</a>
         </div>
         <nav class="header_nav">
             <ul class="header_nav_ul">
