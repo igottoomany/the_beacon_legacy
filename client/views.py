@@ -6,12 +6,10 @@ from django.template import loader
 
 
 def article(request, article_id):
-    template = loader.get_template("article.html")
     context = {
         'post': Post.objects.get(pk=article_id),
     }
-
-    return HttpResponse(template.render(context, request))
+    return render(request, 'article.html', context)
 
 
 class Index(ListView):
