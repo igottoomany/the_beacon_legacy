@@ -17,8 +17,16 @@
                 <div class="writer_info">
                     <div class="writer_email">
                     </div>
-                    <p>writer: {{ post.author.dream_name }} {{ post.author.user.first_name }} {{ post.author.user.last_name }}</p>
-                    <p>editor: {{ post.editor.dream_name }} {{ post.editor.user.first_name }} {{ post.editor.user.last_name }}</p>
+                    <p>writer: <span>{{ post.author.dream_name }} {{ post.author.user.first_name }} {{ post.author.user.last_name }}
+                            <br>{{post.author.eng_name}}
+                            <br>{{post.author.user.email}}
+                        </span>
+                    </p>
+                    <p>editor: <span>{{ post.editor.dream_name }} {{ post.editor.user.first_name }} {{ post.editor.user.last_name }}
+                            <br>{{post.editor.eng_name}}
+                            <br>{{post.editor.user.email}}
+                        </span>
+                    </p>
                     <br><br>
                 </div>
                 <div class="arti_picture">
